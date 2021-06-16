@@ -1,9 +1,8 @@
 const time = document.getElementById('time'),
       greeting = document.getElementById('greeting'),
       name = document.getElementById('name'),
-      plan = document.getElementById('plan');
-
- const showAmPm = true;
+      plan = document.getElementById('plan'),
+      showAmPm = true;
       
 function showTime() {
   let today = new Date(),
@@ -50,7 +49,7 @@ function getName() {
 
 function setName(e) {
   if(e.type = 'keypress') {
-    if(e.witch === 13 || e.keyCode ===13) {
+    if(e.witch === 13 || e.keyCode === 13) {
       localStorage.setItem('name', e.target.innerText);
       name.blur();
     }
@@ -69,7 +68,7 @@ function getPlan() {
 
 function setPlan(e) {
   if(e.type = 'keypress') {
-    if(e.witch === 13 || e.keyCode ===13) {
+    if(e.witch === 13 || e.keyCode === 13) {
       localStorage.setItem('plan', e.target.innerText);
       plan.blur();
     }
